@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
+      <h1 class="text-2xl font-bold mb-4 text-center">
+        Student Registration Form
+      </h1>
+
+      <!-- FORM -->
+      <form id="studentForm">
+        <!-- NAME -->
+        <div class="mb-3">
+          <label>Name</label>
+          <input type="text" id="name" class="w-full border p-2 rounded" />
+          <p id="nameError" class="text-red-500 text-sm"></p>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="text" id="email" class="w-full border p-2 rounded" />
+          <p id="emailError" class="text-red-500 text-sm"></p>
+        </div>
+
+        <!-- PHONE -->
+        <div class="mb-3">
+          <label>Phone</label>
+          <input type="text" id="phone" class="w-full border p-2 rounded" />
+          <p id="phoneError" class="text-red-500 text-sm"></p>
+        </div>
+
+        <!-- DATE -->
+        <div class="mb-3">
+          <label>Date</label>
+          <input type="date" id="date" class="w-full border p-2 rounded" />
+          <p id="dateError" class="text-red-500 text-sm"></p>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded w-full"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="max-w-3xl mx-auto mt-6">
+      <table class="w-full border bg-white">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="p-2 border">Name</th>
+            <th class="p-2 border">Email</th>
+            <th class="p-2 border">Phone</th>
+            <th class="p-2 border">Date</th>
+            <th class="p-2 border">Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
